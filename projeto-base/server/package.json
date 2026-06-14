@@ -1,0 +1,23 @@
+{
+  "name": "ace8-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Backend Express do projeto base do minicurso ACE 8",
+  "scripts": {
+    "dev": "node src/server.js",
+    "start": "node src/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^2.1.8",
+    "supertest": "^7.0.0",
+    "vitest": "^2.1.8"
+  }
+}
