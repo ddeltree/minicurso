@@ -15,6 +15,7 @@ docs/                 documentos do curso
   testes-por-etapa.md     o que se testa em cada vídeo
   projeto-final.md        enunciado do exercício de prática opcional
   divisao-gravacao.md     quem da equipe grava cada vídeo (+ dicas de preparo)
+  guia-da-equipe.md       guia rápido por pessoa para executar a gravação (comece aqui)
   slides/                 decks Marp dos 6 vídeos
 projeto-base/         app full-stack LIMPO (o aluno escreve os testes) — começe aqui
 gabarito/             app + TODOS os testes (solução / "The Green Suite") — branch solucao
