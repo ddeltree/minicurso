@@ -1,0 +1,12 @@
+{
+  "name": "ace8-curso",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minicurso ACE 8 — scripts utilitários (slides Marp). Requer marp-cli instalado globalmente.",
+  "scripts": {
+    "slides": "marp -s docs/slides",
+    "slides:pdf": "marp \"docs/slides/0*.md\" --pdf --allow-local-files",
+    "slides:pptx": "marp \"docs/slides/0*.md\" --pptx",
+    "slides:html": "marp \"docs/slides/0*.md\" --html"
+  }
+}
