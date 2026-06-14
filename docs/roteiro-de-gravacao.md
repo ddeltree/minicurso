@@ -87,14 +87,16 @@
 
 ---
 
-## Vídeo 6 — Projeto final (~10 min)
+## Vídeo 6 — Encerramento e exercício de prática (~10 min)
 **Tela:** slides + `docs/projeto-final.md`.
-- Apresentar o desafio "The Green Suite" e suas 3 partes.
+- Recapitular rapidamente: pirâmide, Vitest, Supertest, Cypress.
+- Apresentar o **exercício de prática opcional** e suas 3 partes.
 - Mostrar onde escrever cada teste e como rodar (`npm test`, `npm run test:e2e`).
-- Critérios de avaliação e como analisar a cobertura.
-- Instruções de entrega no Google Classroom e prazo.
+- Comentar a cobertura como forma de enxergar o que falta testar.
+- Indicar onde está a solução de referência (branch `solucao`, pasta `gabarito/`).
 
-**Fala-guia:** "Agora é com você: replique o que vimos para garantir a suíte verde."
+**Fala-guia:** "Agora é com você: replique o que vimos para deixar a suíte verde — sem
+pressa e sem cobrança."
 
 ---
 
@@ -103,4 +105,5 @@
 - [ ] Verificar legibilidade do código em tela cheia.
 - [ ] Conferir áudio constante.
 - [ ] Ordenar a sequência dos 6 vídeos.
-- [ ] Publicar `projeto-base/` no GitHub (gabarito só após início do desafio).
+- [ ] Publicar `projeto-base/` no GitHub e disponibilizar os vídeos (o gabarito, na branch
+  `solucao`, pode ir junto ou depois — como preferir).

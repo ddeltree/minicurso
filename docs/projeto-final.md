@@ -1,9 +1,9 @@
-# Desafio Final — "The Green Suite"
+# Exercício de Prática (opcional)
 
-Atividade prática **avaliativa**: critério para obtenção do certificado. Você vai
-escrever novos testes automatizados para o projeto base até deixar a suíte **verde**.
+Exercício para fixar o conteúdo: escreva você mesmo alguns testes automatizados para o
+projeto base até deixar a suíte **verde**. Não é avaliado — é só para praticar.
 
-> Carga horária estimada: ~3 h.
+> Tempo estimado: ~3 h. Faça no seu ritmo.
 
 ## Ambiente
 1. Clone/baixe o `projeto-base/` (sem testes).
@@ -46,24 +46,11 @@ Gere e analise o relatório:
 ```bash
 cd server && npm run coverage
 ```
-Comente brevemente (no README de entrega) quais partes ficaram cobertas e quais não.
+Observe quais partes ficaram cobertas e quais não — é uma boa forma de enxergar onde
+faltam testes.
 
-## Critérios de avaliação (rubrica)
+## Meta
+Sucesso = **todos os testes verdes** (`npm test` e `npm run test:e2e` sem falhas).
 
-| Critério | Peso |
-| --- | --- |
-| Parte 1 — unitários corretos e passando | 30% |
-| Parte 2 — integração GET/POST passando | 30% |
-| Parte 3 — E2E do fluxo completo passando | 30% |
-| Parte 4 — análise de cobertura + organização | 10% |
-
-Requisito mínimo para certificação: **todos os testes verdes** (`npm test` e
-`npm run test:e2e` sem falhas).
-
-## Entrega (Google Classroom)
-- Suba seu repositório (ou um `.zip` **sem `node_modules`**) com os testes escritos.
-- Inclua um `README` curto com: como rodar e um print/registro da suíte verde.
-- Prazo: conforme publicado no Classroom.
-
-> A solução de referência fica em `gabarito/` e é liberada apenas após o início do
-> período do desafio.
+> Tente sozinho primeiro. A solução de referência fica na branch `solucao` (pasta
+> `gabarito/`), disponível quando você quiser conferir.
