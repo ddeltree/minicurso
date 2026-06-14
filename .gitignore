@@ -5,3 +5,8 @@ cypress/screenshots/
 cypress/videos/
 *.log
 .DS_Store
+
+# Slides exportados (gerados pelos scripts marp)
+docs/slides/*.pdf
+docs/slides/*.pptx
+docs/slides/*.html

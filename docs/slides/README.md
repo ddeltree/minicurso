@@ -26,22 +26,24 @@ Slides em **Markdown (formato [Marp](https://marp.app/))** — um arquivo por v�
 
 ## Como visualizar / exportar
 
-**Opção 1 — VS Code (mais simples):** instale a extensão *Marp for VS Code*, abra qualquer
-arquivo e use o preview / "Export slide deck" (PDF, PPTX, HTML).
-
-**Opção 2 — linha de comando:** (não precisa instalar nada permanentemente)
+**Opção 1 — scripts npm (recomendado):** na **raiz do repositório** (requer `marp-cli`
+instalado globalmente — `npm i -g @marp-team/marp-cli`):
 ```bash
-# PDF
-npx @marp-team/marp-cli docs/slides/01-introducao.md --pdf
+npm run slides        # apresenta o deck com auto-reload (servidor local)
+npm run slides:pdf    # exporta os 6 decks para PDF
+npm run slides:pptx   # exporta para PowerPoint
+npm run slides:html   # exporta para HTML
+```
+Os scripts convertem todos os decks (`docs/slides/0*.md`) de uma vez; os arquivos gerados
+ficam ao lado dos `.md` e são ignorados pelo git.
 
-# PowerPoint
-npx @marp-team/marp-cli docs/slides/01-introducao.md --pptx
+**Opção 2 — VS Code:** instale a extensão *Marp for VS Code*, abra qualquer arquivo e use o
+preview / "Export slide deck" (PDF, PPTX, HTML).
 
-# HTML
-npx @marp-team/marp-cli docs/slides/01-introducao.md --html
-
-# Apresentar com auto-reload enquanto edita
-npx @marp-team/marp-cli -s docs/slides
+**Opção 3 — marp direto na linha de comando:**
+```bash
+marp docs/slides/01-introducao.md --pdf   # um deck específico
+marp -s docs/slides                       # apresentar a pasta inteira
 ```
 
 ## Personalização rápida
