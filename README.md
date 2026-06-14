@@ -25,7 +25,9 @@ gabarito/             app + TODOS os testes (solução / "The Green Suite") — 
   prática (`docs/projeto-final.md`).
 
 ## Rodar rápido (gabarito — tudo verde)
+O gabarito fica na branch `solucao`:
 ```bash
+git switch solucao
 cd gabarito
 npm install
 npm test           # 22 testes Vitest/Supertest
@@ -42,7 +44,26 @@ npm run test:e2e   # 6 testes Cypress (sobe a app automaticamente)
 | Exercício Partes 1–2 (Vitest) | ✅ 6 |
 | Cypress E2E (login/tasks/exercício) | ✅ 6 |
 
-## Distribuição
-- Publicar `projeto-base/` no GitHub e disponibilizar os vídeos.
-- O gabarito fica na branch `solucao`; publique junto ou depois, como preferir (deixar para
-  depois incentiva o aluno a tentar antes de conferir).
+## Publicar no GitHub
+O repositório já está em git, com duas branches: **`main`** (projeto base + `docs/` + slides) e
+**`solucao`** (tudo da main + `gabarito/`). Para publicar:
+
+1. Crie um repositório **vazio** no GitHub (sem README/licença), ex.: `ace8-testes-automatizados`.
+2. Na raiz do projeto, conecte o remote e envie as branches:
+   ```bash
+   git remote add origin https://github.com/<usuario>/ace8-testes-automatizados.git
+   git push -u origin main      # libera o projeto base para os alunos
+   git push origin solucao      # solução/gabarito — junto ou depois, como preferir
+   ```
+3. (Opcional) No GitHub, confirme `main` como branch padrão.
+
+> Dica: deixar a `solucao` para depois incentiva o aluno a tentar antes de ver o gabarito.
+> Para manter a solução privada por um tempo, crie o repositório como privado (ou suba só a
+> `main` agora e a `solucao` mais tarde).
+
+**Licença (opcional):** por ser material didático, uma licença permissiva como a MIT é comum —
+adicione um arquivo `LICENSE` se desejar.
+
+## Distribuir os vídeos
+- Grave seguindo `docs/roteiro-de-gravacao.md` (slides em `docs/slides/`).
+- Publique os 6 vídeos (YouTube/Drive/etc.) e aponte os alunos para o `projeto-base/`.
