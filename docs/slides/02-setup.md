@@ -4,6 +4,8 @@ paginate: true
 theme: default
 ---
 
+<!-- Vídeo 2 — Setup · Roteiro: docs/roteiro-de-gravacao.md (§ Vídeo 2). Slides com ▶ são RODADOS AO VIVO no terminal/navegador. -->
+
 <!-- _class: lead -->
 
 # Setup do projeto
@@ -33,6 +35,8 @@ npm install
 Instala **raiz + server + client** de uma vez
 (via `postinstall`).
 
+**▶ rodar ao vivo**
+
 ---
 
 ## Rodar
@@ -44,6 +48,8 @@ npm run dev
 - API Express → `http://localhost:3000`
 - Front Vite → `http://localhost:5173`
 
+**▶ rodar ao vivo**
+
 ---
 
 ## O app em 30 segundos
@@ -54,6 +60,8 @@ npm run dev
 - Remover
 
 > Simples e previsível — o foco é testar.
+
+**▶ rodar ao vivo**
 
 ---
 

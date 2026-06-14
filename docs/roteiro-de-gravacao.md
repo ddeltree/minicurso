@@ -7,7 +7,16 @@ de código são para **digitar exatamente como estão**.
 > Você não precisa entender testes de antemão: o roteiro explica cada conceito na hora.
 > Basta ler as falas e reproduzir as ações.
 
+## Como slides e código se conectam
+Cada vídeo tem um deck em `docs/slides/`. O slide **apresenta o conceito**; o editor/terminal
+**mostra funcionando**. Sempre que um slide trouxer um bloco de código, ele é **idêntico** ao
+do `gabarito/` — e a ideia é **rodá-lo ao vivo**, não só exibir. Esses momentos estão marcados
+com 🖼️→🖥️. Nos slides, eles aparecem com o selo **▶ rodar ao vivo**.
+
 ## Legenda
+- 🖼️ **Slide** — qual slide do deck do vídeo deve estar na tela.
+- 🖼️→🖥️ **Rodar ao vivo** — vire do slide para o editor/terminal e **execute** o trecho
+  mostrado, exibindo o resultado.
 - 🎙️ **Fala** — leia em voz alta, do jeito que está.
 - 🖥️ **Ação** — o que fazer na tela (digitar, clicar, rodar).
 - 🟩 **Resultado esperado** — o que deve aparecer (se não aparecer, corte e refaça).
@@ -24,27 +33,38 @@ de código são para **digitar exatamente como estão**.
 - Abra a pasta `projeto-base/` no editor.
 - Rode `npm install` (já pode estar feito).
 - Tenha dois terminais à mão: um para `npm run dev`, outro para `npm test`.
+- Deixe o deck do vídeo aberto no apresentador (ex.: *Marp for VS Code* → "Open preview").
 - Para gravar "do zero", os arquivos de teste **não existem** no `projeto-base/` — você vai
-  digitá-los. A versão pronta de cada arquivo está em `gabarito/` (sua cola/conferência).
+  digitá-los. A versão pronta de cada arquivo está em `gabarito/` (sua cola/conferência) e é a
+  mesma que aparece nos slides.
 
 ---
 
 # 🎬 Vídeo 1 — Introdução (~10 min)
 **Tela:** slides + diagrama da pirâmide de testes. **Sem código.**
+**Slides:** `docs/slides/01-introducao.md` (capa → próximo vídeo).
 
 ### ⏱️ Abertura (~1 min)
+🖼️ Slide 1 (capa) → Slide 2 ("O que você vai aprender").
+
 🎙️ "Olá! Seja bem-vindo a este minicurso de **testes automatizados**. Em poucas horas você
 vai sair sabendo escrever testes de verdade num projeto full-stack: testes de unidade, de
 integração e de ponta a ponta. Eu sou [seu nome], e vamos direto ao ponto: nada de teoria
 infinita, a ideia é colocar a mão no código."
 
+🖼️ Slide 3 ("Pré-requisitos").
+
 🎙️ "Pré-requisito é só o básico de JavaScript, Node e React. Você não precisa saber nada de
 testes — é exatamente isso que vamos aprender aqui."
 
 ### ⏱️ O que é teste automatizado e por que importa (~2,5 min)
+🖼️ Slide 4 ("O que é um teste automatizado?").
+
 🎙️ "Vamos começar pelo começo: o que é um teste automatizado? É simplesmente **um código que
 verifica se o seu outro código funciona**. Em vez de você abrir o navegador e testar tudo na
 mão toda vez que muda algo, você escreve um programa que faz isso por você, em segundos."
+
+🖼️ Slide 5 ("Por que testar?").
 
 🎙️ "Por que isso importa? Três motivos. Primeiro, **confiança**: você muda o código e os
 testes te dizem na hora se quebrou alguma coisa. Segundo, **velocidade**: testar na mão é
@@ -55,7 +75,7 @@ aquela automação que roda os testes a cada commit antes de subir para produç�
 🎙️ "Uma frase para guardar: **testar não é luxo, é o que permite mudar o código sem medo.**"
 
 ### ⏱️ A pirâmide de testes (~3 min)
-🖥️ Mostrar o slide com a pirâmide (3 camadas).
+🖼️ Slide 6 ("A pirâmide de testes").
 
 🎙️ "Existe um conceito clássico que organiza os tipos de teste: a **pirâmide de testes**. Ela
 tem três camadas. Vamos de baixo para cima."
@@ -73,17 +93,22 @@ usuário de verdade: abrem o navegador, clicam, digitam e conferem o que aparece
 os mais realistas, mas também os mais lentos e frágeis — por isso a gente tem poucos, só para
 os fluxos mais importantes."
 
+🖼️ Slide 7 ("Unidade × Integração × E2E").
+
 🎙️ "A ideia da pirâmide é essa proporção: **muitos testes de unidade na base, alguns de
 integração no meio, e poucos E2E no topo.** Assim você tem cobertura boa sem deixar tudo
 lento."
 
 ### ⏱️ Ferramentas e projeto (~2,5 min)
+🖼️ Slide 8 ("Ferramentas").
+
 🎙️ "Para cada camada vamos usar uma ferramenta. Para unidade e integração, o **Vitest** — um
 framework de testes moderno, muito rápido e fácil de configurar. Junto com ele, o
 **Supertest**, que deixa a gente testar rotas HTTP sem precisar subir o servridor numa porta.
 E para os testes E2E, o **Cypress**, que controla um navegador de verdade."
 
-🖥️ Mostrar rapidamente as telas do app (Login, Cadastro, Tarefas) — pode ser print no slide.
+🖼️ Slide 9 ("O projeto base").
+🖥️ (Opcional) Mostrar rapidamente as telas reais do app (Login, Cadastro, Tarefas).
 
 🎙️ "E o projeto que vamos usar é de propósito **pequeno e estável**: um app full-stack com
 login, cadastro e uma lista de tarefas — criar, concluir e remover. React e Vite no front,
@@ -96,15 +121,19 @@ projeto como **exemplo de um fluxo crítico para testar**, e a gente vai testá-
 Num app real você protegeria as tarefas por usuário; aqui o foco é a técnica de teste, então
 deixamos isso de fora de propósito."
 
+🖼️ Slide 10 ("Próximo vídeo").
+
 🎙️ "No próximo vídeo a gente baixa o projeto e roda ele funcionando. Até já!"
 
 ---
 
 # 🎬 Vídeo 2 — Setup do projeto (~5 min)
 **Tela:** terminal + navegador + editor.
+**Slides:** `docs/slides/02-setup.md`.
 **Estado inicial:** `projeto-base/` aberto, dependências instaladas.
 
 ### ⏱️ Estrutura do projeto (~1,5 min)
+🖼️ Slide 2 ("Estrutura").
 🖥️ Mostrar a árvore de pastas no editor.
 
 🎙️ "Vamos conhecer o projeto. Ele tem duas partes principais. A pasta **`server`** é o
@@ -117,14 +146,15 @@ mentirinha, que é só um array na memória. Essa separação vai facilitar muit
 testar."
 
 ### ⏱️ Instalar e rodar (~2 min)
-🖥️ No terminal, na pasta `projeto-base/`:
+🖼️→🖥️ Slide 3 ("Instalar"). O comando do slide é o que você roda agora — vire para o terminal,
+na pasta `projeto-base/`:
 ```bash
 npm install
 ```
 🎙️ "Primeiro, `npm install`. Esse projeto tem um detalhe esperto: ao instalar na raiz, ele já
 instala automaticamente as dependências do `server` e do `client` também. Um comando só."
 
-🖥️ Em seguida:
+🖼️→🖥️ Slide 4 ("Rodar"). Em seguida, rode:
 ```bash
 npm run dev
 ```
@@ -134,13 +164,15 @@ na porta 3000 e o front-end do Vite na porta 5173."
 🟩 No terminal devem aparecer as duas mensagens: a API em `:3000` e o Vite em `:5173`.
 
 ### ⏱️ Usar o app (~1,5 min)
-🖥️ Abrir `http://localhost:5173` no navegador. Cadastrar um usuário, logar, criar uma tarefa,
-marcar como concluída, remover.
+🖼️→🖥️ Slide 5 ("O app em 30 segundos"). Abrir `http://localhost:5173` no navegador. Cadastrar
+um usuário, logar, criar uma tarefa, marcar como concluída, remover.
 
 🎙️ "Vamos ver funcionando. Abro o navegador na porta 5173. Faço um cadastro rápido… faço
 login… e aqui está a tela de tarefas. Crio uma tarefa… marco como concluída — repare que ela
 fica riscada… e removo. É só isso que o app faz. Simples e previsível, do jeito que a gente
 quer para aprender a testar."
+
+🖼️ Slide 6 ("Próximo vídeo").
 
 🎙️ "Com o projeto rodando, no próximo vídeo a gente escreve o primeiro teste de verdade."
 
@@ -148,9 +180,11 @@ quer para aprender a testar."
 
 # 🎬 Vídeo 3 — Vitest: o primeiro teste (~30 min)
 **Tela:** editor + terminal lado a lado.
+**Slides:** `docs/slides/03-vitest-basico.md`.
 **Estado inicial:** projeto instalado. Vamos criar o arquivo de teste do zero.
 
 ### ⏱️ Contexto: o que vamos testar (~2 min)
+🖼️ Slide 2 ("Por onde começar: função pura").
 🖥️ Abrir `server/src/validators/taskValidator.js` e mostrar a função `validateTitle`.
 
 🎙️ "Vamos começar testando a peça mais simples do projeto: uma **função pura**. Função pura,
@@ -163,6 +197,7 @@ caracteres, lança um erro de tamanho mínimo. Se estiver tudo certo, retorna `t
 regra que vamos testar."
 
 ### ⏱️ Criar o arquivo e o primeiro teste (~6 min)
+🖼️ Slide 4 ("Convenção de arquivo").
 🖥️ Criar o arquivo `server/src/validators/taskValidator.test.js`.
 
 🎙️ "O Vitest descobre os testes pelo nome do arquivo. A convenção é `ponto test ponto js`. Vou
@@ -177,7 +212,8 @@ import { validateTitle, MIN_TITLE_LENGTH } from './taskValidator.js'
 descreve um caso de teste individual. E o `expect`, que é como a gente faz as **afirmações** —
 ou, em inglês, *assertions*. E claro, importo a função que vamos testar."
 
-🖥️ Digitar:
+🖼️→🖥️ Slide 3 ("Anatomia de um teste") — o trecho do slide é exatamente este; digite-o no
+editor:
 ```js
 describe('validateTitle', () => {
   it('aceita um título válido', () => {
@@ -201,6 +237,8 @@ npm test
 🎙️ "Verde! Nosso primeiro teste passou. Esse verde é o que a gente persegue o curso inteiro."
 
 ### ⏱️ Testando os casos de erro (~10 min)
+🖼️→🖥️ Slide 5 ("Testar também os erros") — digite, dentro do `describe`:
+
 🎙️ "Um bom teste não verifica só o caminho feliz. Tão importante quanto é garantir que o código
 **rejeita** o que é inválido. Vamos testar os erros."
 
@@ -224,6 +262,7 @@ que isso lance um erro' — e ainda confiro a mensagem, 'Título é obrigatório
 🎙️ "Mesmo caso, mas com só espaços em branco. A função faz `trim` antes de validar, então
 espaços contam como vazio. Bom testar isso explicitamente, porque é um caso fácil de esquecer."
 
+🖼️ Slide 6 ("Casos de borda").
 🖥️ Adicionar:
 ```js
   it('rejeita título abaixo do tamanho mínimo', () => {
@@ -256,7 +295,7 @@ npm test
 praticamente a especificação da nossa função em português."
 
 ### ⏱️ Cobertura (~4 min)
-🖥️ Rodar:
+🖼️→🖥️ Slide 7 ("Cobertura de código") — rode o comando do slide:
 ```bash
 npm run coverage
 ```
@@ -270,15 +309,19 @@ todos os caminhos foram testados. Cuidado: cem por cento não quer dizer 'sem bu
 mostra o que **não** foi testado, que é onde você deve olhar primeiro. É um mapa, não um
 certificado."
 
+🖼️ Slide 8 ("Próximo vídeo").
+
 🎙️ "No próximo vídeo a gente sobe um degrau na pirâmide: mocks e testes de integração."
 
 ---
 
 # 🎬 Vídeo 4 — Vitest: mocks, spies e integração (~20 min)
 **Tela:** editor + terminal.
+**Slides:** `docs/slides/04-mocks-integracao.md`.
 **Estado inicial:** vídeo 3 concluído, testes do validator verdes.
 
 ### ⏱️ Testando o service + a ideia de isolar (~4 min)
+🖼️ Slide 2 ("Test doubles").
 🖥️ Criar `server/src/services/taskService.test.js`.
 
 🎙️ "Agora vamos testar o `taskService`, que é a camada que cria, lista, conclui e remove
@@ -286,7 +329,7 @@ tarefas usando o nosso banco em memória. E aqui aparece um conceito central: a 
 testar cada parte **isolada**. Para isso existem os *test doubles* — dublês de teste — sendo
 os mais comuns o **mock** e o **spy**. Já chego neles."
 
-🖥️ Digitar:
+🖼️→🖥️ Slide 4 ("Testes independentes") — o `beforeEach` do slide é este; digite:
 ```js
 import { describe, it, expect, beforeEach, vi } from 'vitest'
 import { listTasks, createTask, toggleTask, removeTask } from './taskService.js'
@@ -320,7 +363,7 @@ confere só os campos que me interessam. A segunda: depois de criar, a lista dev
 `toHaveLength` um. Ou seja, criou e guardou."
 
 ### ⏱️ Spy: provando a delegação (~3 min)
-🖥️ Adicionar:
+🖼️→🖥️ Slide 3 ("vi.spyOn × vi.fn") — bloco do `spyOn`. Adicionar:
 ```js
   it('createTask delega a validação para validateTitle (spyOn)', () => {
     const spy = vi.spyOn(validator, 'validateTitle')
@@ -360,7 +403,7 @@ fica `true`, chamo de novo volta para `false`. Três: o `removeTask` apaga e a l
 ficar vazia. Repare que cada teste é curtinho e conta uma história só."
 
 ### ⏱️ Mock com vi.fn (~2 min)
-🖥️ Adicionar:
+🖼️→🖥️ Slide 3 ("vi.spyOn × vi.fn") — bloco do `vi.fn`. Adicionar:
 ```js
   it('exemplo de vi.fn como callback mockado', () => {
     const onCreate = vi.fn()
@@ -379,6 +422,7 @@ certa."
 🖥️ Rodar `npm test`. 🟩 Todos verdes.
 
 ### ⏱️ Integração com Supertest (~6 min)
+🖼️ Slide 5 ("Integração com Supertest").
 🖥️ Criar `server/src/routes/tasks.integration.test.js`.
 
 🎙️ "Subindo na pirâmide: testes de **integração**. Até agora testamos funções isoladas. Agora
@@ -386,7 +430,7 @@ quero testar a **rota HTTP inteira** — o caminho do pedido entrar e a resposta
 uso o **Supertest**, que faz requisições direto no app Express, **sem precisar subir uma
 porta**."
 
-🖥️ Digitar:
+🖼️→🖥️ O trecho do Slide 5 é este começo; digite:
 ```js
 import { describe, it, expect, beforeEach } from 'vitest'
 import request from 'supertest'
@@ -403,6 +447,7 @@ describe('rotas /tasks', () => {
 devolve o app sem ligar o servidor. É justamente para isso que o projeto separa o `createApp`
 do `server.js` — fica testável. Crio o app uma vez, e zero o banco antes de cada teste."
 
+🖼️ Slide 6 ("Status HTTP que importam") — deixe à vista enquanto explica os status.
 🖥️ Dentro do `describe`:
 ```js
   it('GET /tasks retorna 200 e um array', async () => {
@@ -469,6 +514,8 @@ vazia."
 
 🖥️ Rodar `npm test`. 🟩 Tudo verde. Mostrar rapidamente `npm run coverage`.
 
+🖼️ Slide 7 ("Próximo vídeo").
+
 🎙️ "Tudo verde. Já temos a base e o meio da pirâmide cobertos. No próximo vídeo, o topo: testes
 de ponta a ponta com Cypress, controlando o navegador de verdade."
 
@@ -476,9 +523,12 @@ de ponta a ponta com Cypress, controlando o navegador de verdade."
 
 # 🎬 Vídeo 5 — Cypress: testes E2E (~30 min)
 **Tela:** editor + Cypress + navegador. **Importante:** o app precisa estar rodando.
+**Slides:** `docs/slides/05-cypress-e2e.md`.
 **Estado inicial:** num terminal, deixe `npm run dev` ligado (server + client no ar).
 
 ### ⏱️ O que é E2E e abrir o Cypress (~4 min)
+🖼️ Slide 2 ("E2E = o usuário de verdade").
+
 🎙️ "Chegamos ao topo da pirâmide: testes **end-to-end**, ou E2E. A diferença é que aqui a gente
 não chama função nem rota: a gente controla um **navegador de verdade**, como se fosse o
 usuário. Abre a página, digita nos campos, clica nos botões e confere o que aparece na tela. É
@@ -491,24 +541,22 @@ npm run cy:open
 🎙️ "Para isso uso o Cypress. Vou abri-lo com `npm run cy:open`. Ele abre uma janela própria, o
 *Test Runner*, onde a gente vê os testes rodando passo a passo dentro do navegador."
 
-🖥️ Mostrar o `cypress.config.js` e o `cypress/support/e2e.js`.
-
-🎙️ "Duas configurações rápidas. No `cypress.config.js` tem a `baseUrl`, apontando para o nosso
-front na porta 5173 — assim eu escrevo só o caminho nos testes, sem repetir o endereço. E no
-`support/e2e.js` tem um detalhe importante para estabilidade."
-
-🖥️ Mostrar/escrever em `cypress/support/e2e.js`:
+🖼️→🖥️ Slide 5 ("Estabilidade: resetar antes"). Mostrar o `cypress.config.js` e escrever em
+`cypress/support/e2e.js` o trecho do slide:
 ```js
 beforeEach(() => {
   cy.request('POST', '/api/test/reset')
 })
 ```
-🎙️ "Antes de cada teste, eu faço uma requisição para uma rota especial, `/test/reset`, que zera
-os dados do servidor. Por quê? Porque E2E mexe no estado real do app. Se um teste deixa lixo, o
-próximo pode falhar sem motivo. Zerando antes de cada teste, cada um roda num ambiente limpo e
-**previsível**. Estabilidade é tudo em E2E."
+🎙️ "Duas configurações rápidas. No `cypress.config.js` tem a `baseUrl`, apontando para o nosso
+front na porta 5173 — assim eu escrevo só o caminho nos testes, sem repetir o endereço. E aqui,
+no `support/e2e.js`, antes de cada teste eu faço uma requisição para uma rota especial,
+`/test/reset`, que zera os dados do servidor. Por quê? Porque E2E mexe no estado real do app.
+Se um teste deixa lixo, o próximo pode falhar sem motivo. Zerando antes de cada teste, cada um
+roda num ambiente limpo e **previsível**. Estabilidade é tudo em E2E."
 
 ### ⏱️ Teste de login (fluxo crítico) (~9 min)
+🖼️ Slide 3 ("Os 5 comandos essenciais").
 🖥️ Criar `cypress/e2e/login.cy.js`.
 
 🎙️ "Vamos começar pelo fluxo mais crítico de qualquer app: cadastro e login. Se isso quebra,
@@ -516,7 +564,7 @@ ninguém entra. É exatamente o tipo de coisa que merece um teste E2E. Aqui o qu
 testando é **o próprio fluxo de autenticação**. As tarefas, lembra, são compartilhadas — por
 isso, no próximo teste, a gente vai direto para a tela de tarefas sem precisar logar."
 
-🖥️ Digitar:
+🖼️→🖥️ Os 5 comandos do slide aparecem todos aqui; digite:
 ```js
 describe('Cadastro e Login', () => {
   it('cadastra um usuário e faz login', () => {
@@ -540,6 +588,8 @@ encontra um elemento, e `cy.type` digita nele. `cy.click` clica. Então: visito 
 cadastro, preencho nome, e-mail e senha, e clico em enviar. Depois visito o login, preencho, e
 clico. No final, `cy.contains` confere que o texto 'Minhas Tarefas' apareceu — ou seja, o login
 funcionou e cheguei na tela certa."
+
+🖼️ Slide 4 ("Seletores estáveis: data-cy").
 
 🎙️ "Uma observação sobre os seletores. Repare que eu uso `[data-cy=email]` em vez de procurar
 por classe de CSS ou por texto. Esses atributos `data-cy` foram colocados no código justamente
@@ -619,7 +669,8 @@ mostrar 'Nenhuma tarefa ainda.' — a mensagem de lista vazia."
 🖥️ Mostrar os três rodando no Test Runner. 🟩 Verdes.
 
 ### ⏱️ Rodar tudo no modo headless (~6 min)
-🖥️ Fechar o Test Runner. No terminal:
+🖼️→🖥️ Slide 6 ("Rodar sem abrir janela (headless)") — rode o comando do slide. Fechar o Test
+Runner. No terminal:
 ```bash
 npm run test:e2e
 ```
@@ -630,6 +681,8 @@ resultado no terminal."
 
 🟩 Mostrar a tabela final do Cypress: todos os specs passando.
 
+🖼️ Slide 7 ("Próximo vídeo").
+
 🎙️ "Pronto: todos os testes E2E verdes, num comando só. Com isso a gente fechou a pirâmide
 inteira — unidade, integração e ponta a ponta. No último vídeo eu te passo um exercício para
 praticar por conta própria."
@@ -638,8 +691,11 @@ praticar por conta própria."
 
 # 🎬 Vídeo 6 — Encerramento e exercício de prática (~10 min)
 **Tela:** slides + `docs/projeto-final.md`.
+**Slides:** `docs/slides/06-encerramento.md`.
 
 ### ⏱️ Recapitulação (~3 min)
+🖼️ Slide 2 ("O que você aprendeu").
+
 🎙️ "Chegamos ao fim. Vamos recapitular o que você aprendeu. Você entendeu a **pirâmide de
 testes** e quando usar cada tipo. Escreveu **testes de unidade** com Vitest — `describe`, `it`,
 `expect` e os matchers como `toBe`, `toThrow` e `toMatchObject`. Aprendeu **mocks e spies** com
@@ -647,10 +703,13 @@ testes** e quando usar cada tipo. Escreveu **testes de unidade** com Vitest — 
 Supertest, checando status e corpo da resposta. E escreveu **testes E2E** com Cypress,
 controlando o navegador com `visit`, `get`, `type`, `click` e `contains`."
 
+🖼️ Slide 3 ("Um núcleo pequeno, mas poderoso").
+
 🎙️ "Repare que foi um conjunto pequeno de comandos. Você não precisa decorar a ferramenta
 inteira: com esse núcleo você já escreve testes de verdade, úteis, em projetos reais."
 
 ### ⏱️ O exercício (~5 min)
+🖼️ Slide 4 ("Exercício de prática (opcional)").
 🖥️ Abrir `docs/projeto-final.md` na tela.
 
 🎙️ "Para fixar, tem um **exercício de prática** — totalmente opcional, sem avaliação, é só para
@@ -662,6 +721,7 @@ tarefa. Parte 2, **integração**: teste o GET e o POST de `/tasks` com Supertes
 status. Parte 3, **E2E**: faça um teste que cria uma tarefa, marca como concluída e remove,
 tudo pela tela com Cypress."
 
+🖼️ Slide 5 ("Como rodar").
 🖥️ Mostrar os comandos:
 ```bash
 npm test          # unidade e integração
@@ -673,6 +733,8 @@ Cypress. E pode usar o `npm run coverage` para enxergar o que ainda falta testar
 simples: todos verdes."
 
 ### ⏱️ Fechamento (~2 min)
+🖼️ Slide 6 ("Obrigado!").
+
 🎙️ "Se você travar, ou quando quiser conferir, a **solução de referência** está na branch
 `solucao`, na pasta `gabarito`, com todos os testes prontos. Mas tente sozinho primeiro — é
 errando e fazendo passar que a ficha cai."
@@ -687,6 +749,7 @@ Pratique, aplique nos seus projetos, e bons testes. Até a próxima!"
 - [ ] Cortar erros, gaguejos e silêncios longos.
 - [ ] Conferir que o código aparece legível em tela cheia (zoom suficiente).
 - [ ] Garantir que todo `npm test`/`test:e2e` mostrado terminou **verde** na gravação.
+- [ ] Conferir que cada slide com **▶ rodar ao vivo** foi de fato executado em tela (não só exibido).
 - [ ] Conferir áudio constante (sem picos/quedas).
 - [ ] Ordenar a sequência dos 6 vídeos.
 - [ ] Publicar `projeto-base/` no GitHub e disponibilizar os vídeos. O gabarito, na branch
