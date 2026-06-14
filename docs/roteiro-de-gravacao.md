@@ -90,6 +90,12 @@ login, cadastro e uma lista de tarefas — criar, concluir e remover. React e Vi
 Express no back, e os dados ficam só na memória, sem banco de dados. Essa simplicidade é
 intencional: assim a gente foca em aprender a testar, e não em configurar ambiente."
 
+🎙️ "Um aviso honesto sobre o escopo: para manter o projeto enxuto, as tarefas aqui são
+**compartilhadas** — não há separação de dados por usuário. O login e o cadastro estão no
+projeto como **exemplo de um fluxo crítico para testar**, e a gente vai testá-los no E2E.
+Num app real você protegeria as tarefas por usuário; aqui o foco é a técnica de teste, então
+deixamos isso de fora de propósito."
+
 🎙️ "No próximo vídeo a gente baixa o projeto e roda ele funcionando. Até já!"
 
 ---
@@ -506,7 +512,9 @@ próximo pode falhar sem motivo. Zerando antes de cada teste, cada um roda num a
 🖥️ Criar `cypress/e2e/login.cy.js`.
 
 🎙️ "Vamos começar pelo fluxo mais crítico de qualquer app: cadastro e login. Se isso quebra,
-ninguém entra. É exatamente o tipo de coisa que merece um teste E2E."
+ninguém entra. É exatamente o tipo de coisa que merece um teste E2E. Aqui o que a gente está
+testando é **o próprio fluxo de autenticação**. As tarefas, lembra, são compartilhadas — por
+isso, no próximo teste, a gente vai direto para a tela de tarefas sem precisar logar."
 
 🖥️ Digitar:
 ```js

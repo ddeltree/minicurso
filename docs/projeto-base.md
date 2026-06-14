@@ -22,7 +22,8 @@ projeto-base/
 ```
 
 ## 3. Modelo de dados (em memória)
-- `tasks: [{ id, title, done }]`
+- `tasks: [{ id, title, done }]` — **compartilhadas** entre todos (sem escopo por usuário,
+  por simplicidade; o login serve como fluxo a testar, não para separar dados)
 - `users: [{ id, name, email, password }]`
 - `resetDb()` — zera tudo (usado em testes e no endpoint `/test/reset`).
 
