@@ -1,9 +1,10 @@
 # Gabarito — Minicurso ACE 8 (Testes Automatizados)
 
 Cópia completa do projeto base **com todos os testes implementados** — "The Green Suite".
-Inclui os testes escritos nas aulas e a solução do desafio final.
+Inclui os testes escritos nas aulas e a solução do exercício de prática.
 
-> ⚠️ NÃO entregar ao aluno antes do início do período do desafio final.
+> Solução de referência. Disponibilize junto ou após os vídeos, como preferir
+> (deixar para depois incentiva o aluno a tentar antes de conferir).
 
 ## Testes inclusos
 | Local                                          | Vídeo / Etapa            |
@@ -12,9 +13,9 @@ Inclui os testes escritos nas aulas e a solução do desafio final.
 | `server/src/services/taskService.test.js`      | V4 — mocks/spies         |
 | `server/src/routes/tasks.integration.test.js`  | V4 — Supertest           |
 | `cypress/e2e/login.cy.js`, `tasks.cy.js`        | V5 — Cypress             |
-| `server/src/desafio/parte1-unitarios.test.js`   | Desafio — Parte 1        |
-| `server/src/desafio/parte2-integracao.test.js`  | Desafio — Parte 2        |
-| `cypress/e2e/desafio-parte3.cy.js`              | Desafio — Parte 3 (E2E)  |
+| `server/src/desafio/parte1-unitarios.test.js`   | Exercício — Parte 1      |
+| `server/src/desafio/parte2-integracao.test.js`  | Exercício — Parte 2      |
+| `cypress/e2e/desafio-parte3.cy.js`              | Exercício — Parte 3 (E2E)|
 
 ## Pré-requisitos
 - Node.js 20+
@@ -36,7 +37,7 @@ concluir, remover).
 ```
 server/   API Express (db em memória, validators, services, controllers, routes)
 client/   React + Vite (pages, components, api.js)
-cypress/  testes E2E (vazio — preenchido no Vídeo 5)
+cypress/  testes E2E (já implementados)
 ```
 
 ## API
@@ -50,7 +51,7 @@ cypress/  testes E2E (vazio — preenchido no Vídeo 5)
 | DELETE | `/tasks/:id`      | remove tarefa                     |
 | POST   | `/test/reset`     | zera o estado (apenas dev/test)   |
 
-## Testes (você vai escrever)
+## Testes (já implementados)
 ```bash
 npm test            # Vitest (unit + integração) no server
 npm run coverage    # relatório de cobertura
