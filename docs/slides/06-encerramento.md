@@ -4,6 +4,8 @@ paginate: true
 theme: default
 ---
 
+<!-- Vídeo 6 — Encerramento · Roteiro: docs/roteiro-de-gravacao.md (§ Vídeo 6). Slides com ▶ são rodados AO VIVO no terminal. -->
+
 <!-- _class: lead -->
 
 # Encerramento
@@ -52,6 +54,8 @@ npm run coverage  # o que falta testar
 ```
 
 Solução de referência: branch **`solucao`** (`gabarito/`).
+
+**▶ rodar ao vivo**
 
 ---
 

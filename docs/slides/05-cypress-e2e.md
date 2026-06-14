@@ -4,6 +4,8 @@ paginate: true
 theme: default
 ---
 
+<!-- Vídeo 5 — Cypress E2E · Roteiro: docs/roteiro-de-gravacao.md (§ Vídeo 5). Slides com ▶ são digitados/rodados AO VIVO (app precisa estar no ar). -->
+
 <!-- _class: lead -->
 
 # Cypress
@@ -32,6 +34,8 @@ cy.click()                  // clica
 cy.contains('Minhas Tarefas') // confere texto
 ```
 
+**▶ rodar ao vivo**
+
 ---
 
 ## Seletores estáveis: data-cy
@@ -57,6 +61,8 @@ beforeEach(() => {
 E2E mexe no estado real.
 Zerar antes = cada teste num ambiente limpo.
 
+**▶ rodar ao vivo**
+
 ---
 
 ## Rodar sem abrir janela (headless)
@@ -69,6 +75,8 @@ Sobe o app, espera ficar no ar,
 roda tudo no navegador invisível.
 
 > É assim que roda numa esteira de CI.
+
+**▶ rodar ao vivo**
 
 ---
 

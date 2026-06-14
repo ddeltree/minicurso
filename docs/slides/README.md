@@ -15,6 +15,15 @@ Slides em **Markdown (formato [Marp](https://marp.app/))** — um arquivo por v�
 > Os slides são propositalmente enxutos (palavras-chave). O texto a ser **narrado** está no
 > `docs/roteiro-de-gravacao.md`, vídeo a vídeo.
 
+## Slides ↔ roteiro
+- Cada deck está amarrado ao roteiro: o `docs/roteiro-de-gravacao.md` indica, com 🖼️, qual
+  slide deve estar na tela em cada fala.
+- Slides marcados com **▶ rodar ao vivo** não são só para exibir: o código/comando que aparece
+  neles é **idêntico ao do `gabarito/`** e deve ser **executado ao vivo** no editor/terminal,
+  mostrando o resultado. No roteiro esses momentos aparecem como 🖼️→🖥️.
+- O slide 1 de cada deck tem uma **nota de apresentador** (comentário Marp) com o vídeo e a
+  seção correspondente do roteiro — visível no modo apresentador, invisível para o público.
+
 ## Como visualizar / exportar
 
 **Opção 1 — VS Code (mais simples):** instale a extensão *Marp for VS Code*, abra qualquer

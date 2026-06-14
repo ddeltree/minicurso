@@ -4,6 +4,8 @@ paginate: true
 theme: default
 ---
 
+<!-- Vídeo 1 — Introdução · Roteiro: docs/roteiro-de-gravacao.md (§ Vídeo 1). Deck de conceitos — sem rodar código. -->
+
 <!-- _class: lead -->
 
 # Testes Automatizados

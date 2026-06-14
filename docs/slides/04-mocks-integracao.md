@@ -4,6 +4,8 @@ paginate: true
 theme: default
 ---
 
+<!-- Vídeo 4 — Mocks e integração · Roteiro: docs/roteiro-de-gravacao.md (§ Vídeo 4). Slides com ▶ são digitados/rodados AO VIVO no editor/terminal. -->
+
 <!-- _class: lead -->
 
 # Vitest
@@ -38,6 +40,8 @@ expect(onCreate).toHaveBeenCalledTimes(1)
 - `spyOn` → prova **colaboração** entre peças
 - `vi.fn` → simula dependências
 
+**▶ rodar ao vivo**
+
 ---
 
 ## Testes independentes
@@ -52,6 +56,8 @@ beforeEach(() => {
 > Cada teste começa do zero.
 > Teste que depende de outro é teste frágil.
 
+**▶ rodar ao vivo**
+
 ---
 
 ## Integração com Supertest
@@ -64,6 +70,8 @@ const res = await request(app).get('/tasks')
 Testa a **rota inteira** — sem subir porta.
 
 Por isso o projeto separa `createApp` do `server.js`.
+
+**▶ rodar ao vivo**
 
 ---
 

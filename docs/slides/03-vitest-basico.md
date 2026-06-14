@@ -4,6 +4,8 @@ paginate: true
 theme: default
 ---
 
+<!-- Vídeo 3 — Vitest básico · Roteiro: docs/roteiro-de-gravacao.md (§ Vídeo 3). Slides com ▶ são digitados/rodados AO VIVO no editor/terminal. -->
+
 <!-- _class: lead -->
 
 # Vitest
@@ -36,6 +38,8 @@ describe('validateTitle', () => {
 - `it` — um caso (leia como frase)
 - `expect` — a afirmação (*assertion*)
 
+**▶ rodar ao vivo**
+
 ---
 
 ## Convenção de arquivo
@@ -51,6 +55,8 @@ O Vitest acha os testes pelo nome `*.test.js`.
 npm test
 ```
 
+**▶ rodar ao vivo**
+
 ---
 
 ## Testar também os erros
@@ -62,6 +68,8 @@ expect(() => validateTitle('')).toThrow('Título é obrigatório')
 - Erro? embrulhe em `() => ...`
 - `toThrow` — espera uma exceção
 - regex casa parte da mensagem: `/ao menos/`
+
+**▶ rodar ao vivo**
 
 ---
 
@@ -86,6 +94,8 @@ npm run coverage
 - Mostra o que **não** foi testado
 - 100% ≠ "sem bugs"
 - É um mapa, não um certificado
+
+**▶ rodar ao vivo**
 
 ---
 
