@@ -9,7 +9,7 @@
 | **Carga Horária** | 6 (seis) horas |
 | **Público-Alvo** | Discentes interessados no ecossistema JavaScript/Node.js |
 | **Equipe** | Aleksander Pires Calixto Negrao, Jose Carlos Silva Santos, Jose Davi Alexandre dos Santos |
-| **Formato** | Vídeos gravados + *follow along* + desafio avaliativo |
+| **Formato** | Vídeos gravados assíncronos + prática autoguiada (exercício opcional) |
 | **Entrega do Plano** | 29/03/2026 |
 
 ## 2. Justificativa
@@ -43,7 +43,7 @@ ecossistema Node.js, da lógica de negócio isolada ao fluxo completo do usuári
 | --- | --- |
 | Aulas gravadas | ~1,5 h |
 | *Follow along* e implementação guiada | ~2 h |
-| Desenvolvimento do desafio final | ~3 h |
+| Prática sugerida (exercício opcional) | ~3 h |
 | **Total** | **6 h** |
 
 ## 6. Conteúdo programático e módulos
@@ -65,9 +65,10 @@ ecossistema Node.js, da lógica de negócio isolada ao fluxo completo do usuári
 - Comandos fundamentais: `cy.visit`, `cy.get`, `cy.click`, `cy.type`, `cy.contains`.
 - Fluxo de login/cadastro; CRUD de tarefas; integração frontend ↔ backend.
 
-### Módulo 4 — Projeto Final (~10 min) → Vídeo 6
-- Explicação do desafio "The Green Suite".
-- Critérios de avaliação e entrega no Google Classroom.
+### Módulo 4 — Encerramento e exercício de prática (~10 min) → Vídeo 6
+- Recapitulação do que foi visto.
+- Apresentação do exercício de prática opcional (sem avaliação).
+- Onde encontrar a solução de referência (branch `solucao`).
 
 ## 7. Ferramentas e escopo mínimo (intencional)
 O escopo é deliberadamente enxuto para garantir estabilidade (ver `roteiro-de-gravacao.md`).
@@ -84,6 +85,6 @@ O escopo é deliberadamente enxuto para garantir estabilidade (ver `roteiro-de-g
 
 ## 9. Critérios de sucesso
 O minicurso é bem-sucedido se os alunos conseguirem: executar os testes; distinguir
-unitário/integração/E2E; escrever testes simples sozinhos; e concluir o desafio final.
+unitário/integração/E2E; escrever testes simples sozinhos; e praticar por conta própria.
 Não se trata de formar especialistas, mas de entregar **uma introdução prática, funcional
 e moderna** sobre testes automatizados.

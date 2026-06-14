@@ -60,9 +60,10 @@ npm run cy:open    # interativo (app já no ar via npm run dev)
 
 ---
 
-## Desafio final (solução de referência — `gabarito/`)
+## Exercício de prática (solução de referência — `gabarito/`)
 - `server/src/desafio/parte1-unitarios.test.js` (3) — regras de negócio.
 - `server/src/desafio/parte2-integracao.test.js` (3) — GET/POST `/tasks`.
 - `cypress/e2e/desafio-parte3.cy.js` (1) — fluxo criar → concluir → remover.
 
-> ⚠️ A pasta `gabarito/` só deve ser liberada após o início do período do desafio.
+> A solução de referência fica na branch `solucao` (pasta `gabarito/`), disponível quando
+> quiser conferir.

@@ -3,8 +3,8 @@
 Sistema full-stack pequeno (React + Vite no front, Express no back, persistência em
 memória) usado como base para escrever testes com **Vitest**, **Supertest** e **Cypress**.
 
-> Este é o projeto **limpo**, sem testes. Você vai escrevê-los acompanhando as aulas.
-> As soluções ficam na pasta `gabarito/` (liberada após o início do desafio final).
+> Este é o projeto **limpo**, sem testes. Você vai escrevê-los acompanhando os vídeos.
+> A solução de referência fica na branch `solucao` (pasta `gabarito/`).
 
 ## Pré-requisitos
 - Node.js 20+
