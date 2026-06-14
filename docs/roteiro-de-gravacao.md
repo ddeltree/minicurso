@@ -104,7 +104,7 @@ lento."
 
 🎙️ "Para cada camada vamos usar uma ferramenta. Para unidade e integração, o **Vitest** — um
 framework de testes moderno, muito rápido e fácil de configurar. Junto com ele, o
-**Supertest**, que deixa a gente testar rotas HTTP sem precisar subir o servridor numa porta.
+**Supertest**, que deixa a gente testar rotas HTTP sem precisar subir o servidor numa porta.
 E para os testes E2E, o **Cypress**, que controla um navegador de verdade."
 
 🖼️ Slide 9 ("O projeto base").
