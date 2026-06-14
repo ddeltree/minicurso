@@ -15,8 +15,7 @@ docs/                 documentos do curso
   testes-por-etapa.md     o que se testa em cada vídeo
   projeto-final.md        enunciado e rubrica do desafio
 projeto-base/         app full-stack LIMPO (o aluno escreve os testes) — começe aqui
-gabarito/             app + TODOS os testes (solução / "The Green Suite")
-*.md (raiz)           notas originais de planejamento
+gabarito/             app + TODOS os testes (solução / "The Green Suite") — branch solucao
 ```
 
 ## Como usar
